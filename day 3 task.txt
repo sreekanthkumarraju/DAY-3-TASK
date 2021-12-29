@@ -1,0 +1,102 @@
+
+
+                                                                 --------------
+                                                                |       day-3    |
+                                                                 --------------
+
+1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
+   ---------------------------------------------------------------------------------------
+  
+   JSON ARRAY:
+   ----------------- 
+      let cars=["FORD","BMW","MARUTI","FORTUNER"]
+
+   FOR LOOP:
+     -----------
+      for(var i=1;i<=cars.length;i++)
+           {
+
+                 console.log(`cars ${i}:${cars[i]}`)
+            }
+
+    OUTPUT:
+      --------
+                         car 0:FORD
+   index.js:133 car 1:BMW
+   index.js:133 car 2:MARUTI
+   index.js:133 car 3:FORTUNER
+  
+
+  FOR IN LOOP:
+   ----------------
+   for(var car in cars)
+       {
+             console.log(`car ${car}:${cars[car]} `)
+        }
+
+   OUTPUT:
+     -------- 
+                     car 0:FORD 
+index.js:142 car 1:BMW 
+index.js:142 car 2:MARUTI 
+index.js:142 car 3:FORTUNER 
+    
+   FOR OF LOOP:
+    ----------------
+      for(let car of cars)
+          {
+                 console.log(`car:${car}` )
+          }
+
+   OUTPUT:
+    ---------   
+                      car:FORD
+index.js:129 car:BMW
+index.js:129 car:MARUTI
+index.js:129 car:FORTUNER
+
+  FOR EACH LOOP:
+   --------------------
+      cars.forEach((car,index)=>{console.log(`car ${index}: ${car}`)})
+
+    OUTPUT:
+     ----------
+                      car 0: FORD
+index.js:138 car 1: BMW
+index.js:138 car 2: MARUTI
+index.js:138 car 3: FORTUNER
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+ 2. Create your own resume data in JSON format
+ -------------------------------------------------------
+
+ let sreekanth_Resume={
+
+    Name:"R V SREEKANTH KUMAR RAJU",
+    DOB:"08-06-1998",
+    SSCpercentage:78,
+    Interpercentage:91.5,
+    UnderGraduation:"BTECH",
+    Branch:"Information Technology",
+    YearOfPassout:2019,
+    UGpercentage:65.4
+      
+  }
+
+ for(let details in sreekanth_Resume)
+      {
+             console.log(`${details}:${sreekanth_Resume[details]}`)
+       }
+
+ OUTPUT:
+  ---------
+                      Name:R V SREEKANTH KUMAR RAJU
+index.js:121 DOB:08-06-1998
+index.js:121 SSCpercentage:78
+index.js:121 Interpercentage:91.5
+index.js:121 UnderGraduation:BTECH
+index.js:121 Branch:Information Technology
+index.js:121 YearOfPassout:2019
+index.js:121 UGpercentage:65.4
+ 
