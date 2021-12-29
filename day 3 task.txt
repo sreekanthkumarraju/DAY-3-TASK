@@ -4,67 +4,72 @@
                                                                 |       day-3    |
                                                                  --------------
 
-1. For the given JSON iterate over all for loops (for, for in, for of, forEach)
-   ---------------------------------------------------------------------------------------
+ 1)
+    var obj = [
+          { person: "Name 1", age: "2", company: "GUVI" },
+          { person: "Name 2", age: "5", company: "GUVI geek" },
+          { person: "Name 3", age: "8", company: "GUVI geek network" },
+        ]
+    use the above JSON to iterate over all for loops (for, for in, for of, forEach)
   
    JSON ARRAY:
    ----------------- 
-      let cars=["FORD","BMW","MARUTI","FORTUNER"]
-
-   FOR LOOP:
+      var obj = [
+          { person: "Name 1", age: "2", company: "GUVI" },
+          { person: "Name 2", age: "5", company: "GUVI geek" },
+          { person: "Name 3", age: "8", company: "GUVI geek network" },
+        ]
+        
+        FOR LOOP
      -----------
-      for(var i=1;i<=cars.length;i++)
-           {
+     for(var i=0;i<obj.length;i++)
+         {
 
-                 console.log(`cars ${i}:${cars[i]}`)
-            }
+             console.log("details of person ",i, ":" , obj[i] )
+         }
 
     OUTPUT:
       --------
-                         car 0:FORD
-   index.js:133 car 1:BMW
-   index.js:133 car 2:MARUTI
-   index.js:133 car 3:FORTUNER
+               details of person  0 : {person: 'Name 1', age: '2', company: 'GUVI'}
+index.js:104   details of person  1 : {person: 'Name 2', age: '5', company: 'GUVI geek'}
+index.js:104   details of person  2 : {person: 'Name 3', age: '8', company: 'GUVI geek network'}
   
 
   FOR IN LOOP:
    ----------------
-   for(var car in cars)
-       {
-             console.log(`car ${car}:${cars[car]} `)
-        }
+  for(var details in obj)
+     {
+        console.log("details of person ",details, ":" , obj[details] )
+
+     }
 
    OUTPUT:
-     -------- 
-                     car 0:FORD 
-index.js:142 car 1:BMW 
-index.js:142 car 2:MARUTI 
-index.js:142 car 3:FORTUNER 
+  -------- 
+            details of person  0 : {person: 'Name 1', age: '2', company: 'GUVI'}
+index.js:89 details of person  1 : {person: 'Name 2', age: '5', company: 'GUVI geek'}
+index.js:89 details of person  2 : {person: 'Name 3', age: '8', company: 'GUVI geek network'}
     
    FOR OF LOOP:
     ----------------
-      for(let car of cars)
-          {
-                 console.log(`car:${car}` )
-          }
-
+    for(var person of obj)
+       {
+            console.log("details of a person are :",person)
+       }
    OUTPUT:
-    ---------   
-                      car:FORD
-index.js:129 car:BMW
-index.js:129 car:MARUTI
-index.js:129 car:FORTUNER
+  ---------   
+            details of a person are : {person: 'Name 1', age: '2', company: 'GUVI'}
+index.js:95 details of a person are : {person: 'Name 2', age: '5', company: 'GUVI geek'}
+index.js:95 details of a person are : {person: 'Name 3', age: '8', company: 'GUVI geek network'}
 
   FOR EACH LOOP:
-   --------------------
-      cars.forEach((car,index)=>{console.log(`car ${index}: ${car}`)})
+ --------------------
+     obj.forEach((person, details)=>console.log("details of person ",details, ":" , person ))
 
     OUTPUT:
-     ----------
-                      car 0: FORD
-index.js:138 car 1: BMW
-index.js:138 car 2: MARUTI
-index.js:138 car 3: FORTUNER
+   ----------
+            details of person  0 : {person: 'Name 1', age: '2', company: 'GUVI'}
+index.js:98 details of person  1 : {person: 'Name 2', age: '5', company: 'GUVI geek'}
+index.js:98 details of person  2 : {person: 'Name 3', age: '8', company: 'GUVI geek network'}
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -80,8 +85,8 @@ index.js:138 car 3: FORTUNER
     UnderGraduation:"BTECH",
     Branch:"Information Technology",
     YearOfPassout:2019,
-    UGpercentage:65.4
-      
+    UGpercentage:65.4,
+    Languages_known :" c  Java  DBMS  JDBC JAVASCRIPT"  
   }
 
  for(let details in sreekanth_Resume)
@@ -90,8 +95,8 @@ index.js:138 car 3: FORTUNER
        }
 
  OUTPUT:
-  ---------
-                      Name:R V SREEKANTH KUMAR RAJU
+---------
+             Name:R V SREEKANTH KUMAR RAJU
 index.js:121 DOB:08-06-1998
 index.js:121 SSCpercentage:78
 index.js:121 Interpercentage:91.5
@@ -99,4 +104,5 @@ index.js:121 UnderGraduation:BTECH
 index.js:121 Branch:Information Technology
 index.js:121 YearOfPassout:2019
 index.js:121 UGpercentage:65.4
+             Languages_known: c  Java  DBMS  JDBC JAVASCRIPT
  
